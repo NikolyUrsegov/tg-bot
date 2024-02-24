@@ -29,7 +29,7 @@ export class StartCommand extends Command {
         if (!dataParse.find((id: number) => id === chatId)) {
             fs.writeFileSync('./file.json', JSON.stringify([...dataParse, chatId]))
         } else {
-            console.log('Такой юзер уже есть')
+            console.log(`Такой юзер уже есть, ${new Date()}`)
         }
     }
 
