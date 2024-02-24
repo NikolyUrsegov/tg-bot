@@ -13,8 +13,8 @@ export class GoodEveningCommand extends Command {
 
     handle(): void {
         const rule = new this.job.RecurrenceRule();
-        rule.hour = 17;
-        rule.minute = 45;
+        rule.hour = 15;
+        rule.minute = 0;
 
 
         this.job.scheduleJob(rule, () => {
