@@ -19,7 +19,12 @@ class Bot {
     }
 
     init() {
-        this.commands = [new StartCommand(this.bot), new GoodMorningCommand(this.bot), new ComplimentsCommand(this.bot), new GoodEveningCommand(this.bot)]
+        this.commands = [
+            new StartCommand(this.bot),
+            new GoodMorningCommand(this.bot),
+            new ComplimentsCommand(this.bot),
+            new GoodEveningCommand(this.bot),
+        ]
 
         for (const command of this.commands) {
             command.handle()

@@ -51,5 +51,10 @@ export class ComplimentsCommand extends Command {
                 }
             });
         }
+
+        this.bot.command('compliment', async (ctx) => {
+            const message = await this.handleCompliment()
+            void this.bot.telegram.sendMessage(ctx.chat.id, `${message}❤️`);
+        })
     }
 }
