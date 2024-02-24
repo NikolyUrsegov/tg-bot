@@ -14,7 +14,7 @@ export class GoodEveningCommand extends Command {
     handle(): void {
         const rule = new this.job.RecurrenceRule();
         rule.hour = 17;
-        rule.minute = 30;
+        rule.minute = 45;
 
 
         this.job.scheduleJob(rule, () => {
@@ -27,6 +27,7 @@ export class GoodEveningCommand extends Command {
 
             for (const id of dataParse) {
                 void this.bot.telegram.sendMessage(id, `${dataMorningParse[randomMessage].text}❤️`);
+                console.log(`Отпрваил пожелания спокойной ночи ${new Date()}`)
             }
         })
     }
