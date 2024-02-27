@@ -28,7 +28,7 @@ export class ComplimentsCommand extends Command {
     }
 
     handle(): void {
-        let hour = [2, 5, 9, 12];
+        let hour = [8, 11, 13, 16];
         let minute = [0, 0, 0, 0];
 
         for (let i = 0; i < hour.length; i++) {
